@@ -1,5 +1,5 @@
 {
-  "name": "products-gallery",
+  "name": "FreshCart:server",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:products-gallery": "node dist/products-gallery/server/server.mjs"
+    "serve:ssr:products-gallery": "node dist/products-gallery/server/server.mjs",
+    "build:ssr": "ng build --configuration=production && ng run products-gallery:server:production",
+    "serve:ssr": "node dist/products-gallery/server/main.js"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.14",
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "@nguniversal/express-engine": "^7.0.2",
     "@tailwindcss/postcss": "^4.1.11",
     "express": "^4.18.2",
     "flowbite": "^3.1.2",
